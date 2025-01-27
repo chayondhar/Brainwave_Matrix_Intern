@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import UserProfie from './pages/UserProfie';
 import Authors from './pages/Authors';
 import EditPost from './pages/EditPost';
+import DeletePost from './pages/DeletePost';
 import CreatePost from './pages/CreatePost';
 import CategoryPosts from './pages/CategoryPosts';
 import AuthorPosts from './pages/AuthorPosts';
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {index: true, element: <Home/>},
-      {path: "post/:id", element: <PostDetail/>},
+      {path: "posts/:id", element: <PostDetail/>},
       {path: "register", element: <Register/>},
       {path: "login", element: <Login/>},
       {path: "profile/:id", element: <UserProfie/>},
@@ -33,7 +34,8 @@ const router = createBrowserRouter([
       {path: "post/:id/categories/:category", element: <CategoryPosts/>},
       {path: "posts/users/:id", element: <AuthorPosts/>},
       {path: "myposts/:id", element: <Dashboard/>},
-      {path: "post/:id/edit", element: <EditPost/>},
+      {path: "posts/:id/edit", element: <EditPost/>},
+      {path: "posts/:id/delete", element: <DeletePost/>},
       {path: "logout", element: <Logout/>},
     ]
   }
