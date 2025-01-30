@@ -21,3 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore node_modules from both folders
+client/node_modules/
+server/node_modules/
+
+# Ignore environment variables
+client/.env
+server/.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
